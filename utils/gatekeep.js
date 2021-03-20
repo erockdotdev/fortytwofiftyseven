@@ -11,7 +11,6 @@ export default function gatekeep(environment) {
 
     function blockAccess() {
       if (!hasAccess && !allowEnv) {
-        console.log('im')
         var password = prompt("Password");
         if (password !== "lfg") {
           return blockAccess();
