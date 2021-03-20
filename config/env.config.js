@@ -1,4 +1,4 @@
-const VERCEL_GIT_COMMIT_REFS = {
+export const VERCEL_GIT_COMMIT_REFS = {
   DEVELOP: "develop",
   STAGING: "staging",
   MASTER: "master",
