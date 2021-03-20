@@ -17,9 +17,8 @@ export default function Home({ VERCEL_GIT_COMMIT_REF }) {
       ? `| ${VERCEL_GIT_COMMIT_REF}`
       : ""
   }`;
-
   return (
-    <Layout>
+    <Layout environment={VERCEL_GIT_COMMIT_REF}>
       <Head>
         <title>{title}</title>
       </Head>
