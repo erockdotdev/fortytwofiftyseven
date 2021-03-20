@@ -53,6 +53,42 @@ Notes on Environment Variables
   – [Styled Components with SSR](https://styled-components.com/docs/advanced#server-side-rendering)
 - use [classnames](https://www.npmjs.com/package/classnames) package for dynamic class name rendering
 
+## TypeScript
+
+Typescript is configured to allow absolute imports
+
+### Static Generation and Server-side Rendering
+
+For getStaticProps, getStaticPaths, and getServerSideProps, you can use the GetStaticProps, GetStaticPaths, and GetServerSideProps types respectively:
+
+```js
+import { GetStaticProps, GetStaticPaths, GetServerSideProps } from "next";
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  // ...
+};
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  // ...
+};
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  // ...
+};
+```
+
+### API Routes
+
+The following is an example of how to use the built-in types for API routes:
+
+```js
+import { NextApiRequest, NextApiResponse } from "next";
+
+export default (req: NextApiRequest, res: NextApiResponse) => {
+  // ...
+};
+```
+
 ## IDE
 
 Feel free to use any editor but I recommend VS code with the following configurations
