@@ -9,12 +9,14 @@ export async function getStaticProps(){
   const allPostsData = getSortedPostsData();
   return {
     props: {
-      allPostsData
+      allPostsData,
+      TEST_VAR: `${process.env.TEST_VAR}`,
+      VERCEL_GIT_COMMIT_REF: `${process.env.VERCEL_GIT_COMMIT_REF}`
     }
   }
 }
 
-export default function Home({allPostsData}) {
+export default function Home({allPostsData, TEST_VAR, VERCEL_GIT_COMMIT_REF}) {
   return (
     <Layout home>
       <Head>
@@ -22,7 +24,9 @@ export default function Home({allPostsData}) {
       </Head>
       <section className={utilStyles.headingMd}>
         <h1>fortytwofiftyseven</h1>
-        <p>[Your Self Introduction]</p>
+        <p>PUBLIC_ENV_TEST_VAR: <strong>{process.env.NEXT_PUBLIC_TEST_VAR}</strong></p>
+        <p>SERVER_TEST_VAR from getStaticProps: <strong>{TEST_VAR}</strong></p>
+        <p>VERCEL_GIT_COMMIT_REF: <strong>{VERCEL_GIT_COMMIT_REF}</strong></p>
         <p>
           (This is a sample website - you’ll be building a site like this on{" "}
           <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
