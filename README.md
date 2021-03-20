@@ -1,5 +1,16 @@
 # Read Me
 
+## Vercel Deployment
+
+https://vercel.com/erockdotdev/fortytwofiftyseven
+
+https://develop.fortytwofiftyseven.com/
+https://staging.fortytwofiftyseven.com/
+https://fortytwofiftyseven.com/
+
+Environment Variables 
+https://vercel.com/erockdotdev/fortytwofiftyseven/settings/environment-variables
+
 ## Next JS Reference
 
 - [Serving static assets](https://nextjs.org/docs/basic-features/static-file-serving)
