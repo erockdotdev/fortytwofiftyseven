@@ -1,7 +1,6 @@
 import Head from "next/head";
-import Layout from "../components/layout";
-import { VERCEL_GIT_COMMIT_REFS } from "../config/env.config";
-
+import Layout from "components/layout";
+import { VERCEL_GIT_COMMIT_REFS } from "config/env.config";
 
 export async function getStaticProps() {
   return {
@@ -11,15 +10,18 @@ export async function getStaticProps() {
   };
 }
 
-export default function Home({ VERCEL_GIT_COMMIT_REF }) {
+interface HomeProps {
+  VERCEL_GIT_COMMIT_REF: string;
+}
+
+export default function Home({ VERCEL_GIT_COMMIT_REF }: HomeProps) {
   const title = `4257 ${
     VERCEL_GIT_COMMIT_REF !== VERCEL_GIT_COMMIT_REFS.MASTER
       ? `| ${VERCEL_GIT_COMMIT_REF}`
       : ""
   }`;
-
   return (
-    <Layout>
+    <Layout environment={VERCEL_GIT_COMMIT_REF}>
       <Head>
         <title>{title}</title>
       </Head>
