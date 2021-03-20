@@ -33,7 +33,6 @@ export default function Home(props) {
       return process.env.NEXT_PUBLIC_GRAPHQL_URI__STAGING;
     if (isProd) return process.env.NEXT_PUBLIC_GRAPHQL_URI;
   };
-
   return (
     <Layout home>
       <Head>
