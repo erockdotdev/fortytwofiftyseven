@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { VERCEL_GIT_COMMIT_REFS } from "../config/env.config";
+import { VERCEL_GIT_COMMIT_REFS } from "../../config/env.config";
 
 // Totally unsafe way to password protect deployed versions but
 // it's simple enough for now

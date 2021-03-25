@@ -3,6 +3,7 @@
 
 import styled, { createGlobalStyle } from "styled-components";
 import GlobalStyles from "src/styles/global-styles";
+import useGatekeep from "../utils/useGatekeep";
 import Footer from "./Footer";
 import Nav from "./Nav";
 
@@ -14,11 +15,18 @@ const InnerStyles = styled.div`
 
 interface LayoutProps {
   children: React.ReactNode;
+  environment: string;
   showNav?: boolean;
   showFooter?: boolean;
 }
 
-export default function Layout({ children, showNav, showFooter }: LayoutProps) {
+export default function Layout({
+  children,
+  environment,
+  showNav,
+  showFooter,
+}: LayoutProps) {
+  useGatekeep(environment);
   return (
     <div>
       {showNav && <Nav />}
