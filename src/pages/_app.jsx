@@ -1,3 +1,3 @@
-export default function App({ Component, pageProps, VERCEL_GIT_COMMIT_REF }) {
+export default function App({ Component, pageProps }) {
   return <Component {...pageProps} />;
 }

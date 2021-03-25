@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Layout from "src/components/Layout";
+import BasePage from "src/components/layouts/BasePage";
 import { VERCEL_GIT_COMMIT_REFS } from "config/env.config";
 import { GetStaticProps } from "next";
 import styled from "styled-components";
@@ -11,7 +11,6 @@ export const getStaticProps: GetStaticProps = async () => {
     },
   };
 };
-
 interface HomeProps {
   VERCEL_GIT_COMMIT_REF: string;
 }
@@ -23,7 +22,7 @@ const Home = ({ VERCEL_GIT_COMMIT_REF }: HomeProps) => {
       : ""
   }`;
   return (
-    <Layout showNav showFooter environment={VERCEL_GIT_COMMIT_REF}>
+    <BasePage environment={VERCEL_GIT_COMMIT_REF}>
       <Head>
         <title>{title}</title>
       </Head>
@@ -33,7 +32,7 @@ const Home = ({ VERCEL_GIT_COMMIT_REF }: HomeProps) => {
         <h2>4257</h2>
         <p>the highest quality strangeness</p>
       </main>
-    </Layout>
+    </BasePage>
   );
 };
 

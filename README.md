@@ -104,3 +104,6 @@ Feel free to use any editor but I recommend VS code with the following configura
 Plugins
 
 - [Auto Tag Rename](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
+
+Folder Structure
+Loosely based on [this](https://wityan.medium.com/next-js-project-structure-1531610bed71) article

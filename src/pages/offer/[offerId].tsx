@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Layout from "src/components/Layout";
+import BasePage from "src/components/layouts/BasePage";
 import { VERCEL_GIT_COMMIT_REFS } from "config/env.config";
 import { GetStaticProps } from "next";
 import { useRouter } from "next/dist/client/router";
@@ -26,7 +26,7 @@ const Home = ({ VERCEL_GIT_COMMIT_REF }: HomeProps) => {
   const { offerId } = query;
 
   return (
-    <Layout environment={VERCEL_GIT_COMMIT_REF}>
+    <BasePage hideNav hideFooter environment={VERCEL_GIT_COMMIT_REF}>
       <Head>
         <title>{title}</title>
       </Head>
@@ -35,7 +35,7 @@ const Home = ({ VERCEL_GIT_COMMIT_REF }: HomeProps) => {
       >
         AM ZEH Offár ````{offerId}````
       </main>
-    </Layout>
+    </BasePage>
   );
 };
 
