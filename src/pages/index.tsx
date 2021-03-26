@@ -26,7 +26,11 @@ const Home = ({ VERCEL_GIT_COMMIT_REF }: HomeProps) => {
         <title>{title}</title>
       </Head>
       <main
-        style={{ margin: "250px auto", maxWidth: "500px", padding: "25px" }}
+        style={{
+          margin: "250px auto",
+          maxWidth: "500px",
+          padding: "0 25px",
+        }}
       >
         <h2>4257</h2>
         <p>the highest quality strangeness</p>
