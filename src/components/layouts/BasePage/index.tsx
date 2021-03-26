@@ -6,7 +6,7 @@ import LayoutRoot from "src/components/layouts/LayoutRoot/LayoutRoot";
 
 interface LayoutProps {
   children: React.ReactNode;
-  environment: string;
+  environment?: string;
   hideNav?: boolean;
   hideFooter?: boolean;
 }
