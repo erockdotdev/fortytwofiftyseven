@@ -2,7 +2,6 @@ import Head from "next/head";
 import BasePage from "src/components/layouts/BasePage";
 import { VERCEL_GIT_COMMIT_REFS } from "config/env.config";
 import { GetStaticProps } from "next";
-import styled from "styled-components";
 
 export const getStaticProps: GetStaticProps = async () => {
   return {

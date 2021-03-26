@@ -60,6 +60,7 @@ more info [here](https://nextjs.org/docs/api-reference/data-fetching/getInitialP
 
 - styling with [styled-components](https://styled-components.com/)
   – [Styled Components with SSR](https://styled-components.com/docs/advanced#server-side-rendering)
+- [media queries](https://jsramblings.com/how-to-use-media-queries-with-styled-components/) with styled components
 - use [classnames](https://www.npmjs.com/package/classnames) package for dynamic class name rendering
 
 ## TypeScript
